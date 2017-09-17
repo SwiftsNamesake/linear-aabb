@@ -1,0 +1,955 @@
+
+==================== FINAL INTERFACE ====================
+2017-09-17 01:20:27.4531315 UTC
+
+interface linear-aabb-0.1.0.0-FKS3bcYwI7gItIwXlgJNo2:Data.AABB 8002
+  interface hash: e946e8a85ac48085ecd5851641dd4b47
+  ABI hash: 56e99870b53ed95f69960c170ff616e3
+  export-list hash: c162d171d5ec25db983677b29dd1932f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 84476b58bf6ae546a622f2c1d3c08d9e
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.AABB.axes
+  Data.AABB.axis
+  Data.AABB.depth
+  Data.AABB.height
+  Data.AABB.hi
+  Data.AABB.intersect
+  Data.AABB.lo
+  Data.AABB.overlap
+  Data.AABB.size
+  Data.AABB.unzipA
+  Data.AABB.w
+  Data.AABB.width
+  Data.AABB.x
+  Data.AABB.y
+  Data.AABB.z
+  Data.AABB.zipA
+  Data.AABB.AABB{Data.AABB.AABB}
+module dependencies:
+package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      Win32-2.3.1.1@Win32-2.3.1.1
+                      adjunctions-4.3@adjunctions-4.3-A5jfd1yrmaY4DRMJuiquBp
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0*
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytes-0.15.3@bytes-0.15.3-JnJk9rvpCHsKPq5vbMmKHS
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      call-stack-0.1.0@call-stack-0.1.0-FYVrCPXGP9EGAuTW32963O
+                      cereal-0.5.4.0@cereal-0.5.4.0-BsAGxfp8yAs3CiRo2E875e
+                      comonad-5.0.2@comonad-5.0.2-Fq9Xy9jdx6uIyJZn00E6Yc
+                      containers-0.5.7.1@containers-0.5.7.1
+                      contravariant-1.4@contravariant-1.4-29zF0Im431177ovfbHYCGv
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      distributive-0.5.3@distributive-0.5.3-IX4kyVcHAyoH4uFYrsjY1R
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      free-4.12.4@free-4.12.4-C2gBQV0m8J42HxqSLTFyVx
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1
+                      integer-logarithms-1.0.2@integer-logarithms-1.0.2-92lMiWV9mmYAwfMEYgfQ0D
+                      kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX
+                      lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW
+                      linear-1.20.7@linear-1.20.7-Hm7B9kQS5iJ4TZVBdSCC2p*
+                      microlens-0.4.8.1@microlens-0.4.8.1-BVhsezHoPw9Ez18LAXVtpM*
+                      mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      prelude-extras-0.4.0.3@prelude-extras-0.4.0.3-BhL9U5k7NtGJn1itwIHt2Y
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh
+                      profunctors-5.2.1@profunctors-5.2.1-Ga89Nyw0d7LBEIoX4AZ6gT
+                      reflection-2.1.2@reflection-2.1.2-Bem12O1xFGSHr4C2Hyu1c4
+                      scientific-0.3.5.2@scientific-0.3.5.2-FM2NdrNTcdbCDq9wuNnhIA
+                      semigroupoids-5.2.1@semigroupoids-5.2.1-Db8txM8kTsI6Y49CY6g5Jn
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      th-abstraction-0.2.6.0@th-abstraction-0.2.6.0-HRFJgpoqs5HJ5LgHnjmMhQ
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-compat-0.5.1.4@transformers-compat-0.5.1.4-IuFogs8HAVUJBWVNMhtssu
+                      unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC
+                      vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         linear-1.20.7@linear-1.20.7-Hm7B9kQS5iJ4TZVBdSCC2p:Linear.Instances
+         reflection-2.1.2@reflection-2.1.2-Bem12O1xFGSHr4C2Hyu1c4:Data.Reflection
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Fusion.Bundle
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+family instance modules: adjunctions-4.3@adjunctions-4.3-A5jfd1yrmaY4DRMJuiquBp:Data.Functor.Rep
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Biff
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Clown
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Fix
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Flip
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Join
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Joker
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Product
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Sum
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Tannen
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Wrapped
+                         bytes-0.15.3@bytes-0.15.3-JnJk9rvpCHsKPq5vbMmKHS:Data.Bytes.Get
+                         bytes-0.15.3@bytes-0.15.3-JnJk9rvpCHsKPq5vbMmKHS:Data.Bytes.Signed
+                         bytes-0.15.3@bytes-0.15.3-JnJk9rvpCHsKPq5vbMmKHS:Data.Bytes.VarInt
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX:Data.Functor.Day
+                         kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX:Data.Functor.Yoneda
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.At
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Internal.Indexed
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Reified
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Tuple
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Wrapped
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Zoom
+                         linear-1.20.7@linear-1.20.7-Hm7B9kQS5iJ4TZVBdSCC2p:Linear.V
+                         linear-1.20.7@linear-1.20.7-Hm7B9kQS5iJ4TZVBdSCC2p:Linear.V1
+                         linear-1.20.7@linear-1.20.7-Hm7B9kQS5iJ4TZVBdSCC2p:Linear.V2
+                         linear-1.20.7@linear-1.20.7-Hm7B9kQS5iJ4TZVBdSCC2p:Linear.V3
+                         linear-1.20.7@linear-1.20.7-Hm7B9kQS5iJ4TZVBdSCC2p:Linear.V4
+                         microlens-0.4.8.1@microlens-0.4.8.1-BVhsezHoPw9Ez18LAXVtpM:Lens.Micro.Internal
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Control.Monad.Primitive
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Data.Primitive.Array
+                         profunctors-5.2.1@profunctors-5.2.1-Ga89Nyw0d7LBEIoX4AZ6gT:Data.Profunctor.Rep
+                         tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt:Data.Tagged
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+                         th-abstraction-0.2.6.0@th-abstraction-0.2.6.0-HRFJgpoqs5HJ5LgHnjmMhQ:Language.Haskell.TH.Datatype
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashMap.Base
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashSet
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Primitive
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
+import  -/  base-4.9.1.0:Control.Applicative 2c56a0c43327cbbcb6e7a55bf05443c9
+import  -/  base-4.9.1.0:Data.Functor 682cc832c233b71cec70179490a08631
+import  -/  base-4.9.1.0:Data.List 7349774f430841349c90dfd1144aea97
+import  -/  base-4.9.1.0:Data.OldList c9282ee91951bdcbd918d2960562c007
+import  -/  base-4.9.1.0:Data.Traversable 078621b399ac9374b02f3f2ce55a08e9
+import  -/  base-4.9.1.0:Data.Tuple b07f695e7ce8fe20cc8a32abf62f60ec
+import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.Num 38b8aac8807c096c7f3ca3c1eff02939
+import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+import  -/  linear-1.20.7@linear-1.20.7-Hm7B9kQS5iJ4TZVBdSCC2p:Linear.V1 524b66db22add3c83ee9e5df6956cefb
+import  -/  linear-1.20.7@linear-1.20.7-Hm7B9kQS5iJ4TZVBdSCC2p:Linear.V2 a67c99c5a1f39948af0b2c131863c121
+import  -/  linear-1.20.7@linear-1.20.7-Hm7B9kQS5iJ4TZVBdSCC2p:Linear.V3 965e1babb6d3ba722c418fb95568cb0e
+import  -/  linear-1.20.7@linear-1.20.7-Hm7B9kQS5iJ4TZVBdSCC2p:Linear.V4 49e62bbccc503ab56cec78d5874fc006
+import  -/  microlens-0.4.8.1@microlens-0.4.8.1-BVhsezHoPw9Ez18LAXVtpM:Lens.Micro 1df5b52bb4f60ef571f1a717ce94a3d6
+import  -/  microlens-0.4.8.1@microlens-0.4.8.1-BVhsezHoPw9Ez18LAXVtpM:Lens.Micro.Type 1ff53c7b4992a3bf638900edd070d0c2
+9d920d9efbcd2650fd57cb8e63fe3831
+  $fEqAABB ::
+    GHC.Classes.Eq (f a) => GHC.Classes.Eq (Data.AABB.AABB f a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ (f :: * -> *)
+                      @ a
+                      ($dEq :: GHC.Classes.Eq (f a)).
+                  @ (Data.AABB.AABB f a)
+                  (Data.AABB.$fEqAABB_$c== @ f @ a $dEq)
+                  (Data.AABB.$fEqAABB_$c/= @ f @ a $dEq) -}
+9d920d9efbcd2650fd57cb8e63fe3831
+  $fEqAABB_$c/= ::
+    GHC.Classes.Eq (f a) =>
+    Data.AABB.AABB f a -> Data.AABB.AABB f a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S(SS),1*U(U,U)><S(SS),1*U(U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   ($dEq :: GHC.Classes.Eq (f a))
+                   (a1 :: Data.AABB.AABB f a)
+                   (b :: Data.AABB.AABB f a) ->
+                 case Data.AABB.$fEqAABB_$c== @ f @ a $dEq a1 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+9d920d9efbcd2650fd57cb8e63fe3831
+  $fEqAABB_$c== ::
+    GHC.Classes.Eq (f a) =>
+    Data.AABB.AABB f a -> Data.AABB.AABB f a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S(SS),1*U(U,U)><S(SS),1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   (w1 :: GHC.Classes.Eq (f a))
+                   (w2 :: Data.AABB.AABB f a)
+                   (w3 :: Data.AABB.AABB f a) ->
+                 case w2 of ww { Data.AABB.AABB ww1 ww2 ->
+                 case w3 of ww3 { Data.AABB.AABB ww4 ww5 ->
+                 case GHC.Classes.== @ (f a) w1 ww1 ww4 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Classes.== @ (f a) w1 ww2 ww5 } } }) -}
+9d920d9efbcd2650fd57cb8e63fe3831
+  $fShowAABB ::
+    GHC.Show.Show (f a) => GHC.Show.Show (Data.AABB.AABB f a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ (f :: * -> *)
+                      @ a
+                      ($dShow :: GHC.Show.Show (f a)).
+                  @ (Data.AABB.AABB f a)
+                  (Data.AABB.$fShowAABB_$cshowsPrec @ f @ a $dShow)
+                  (Data.AABB.$fShowAABB_$cshow @ f @ a $dShow)
+                  (Data.AABB.$fShowAABB_$cshowList @ f @ a $dShow) -}
+fd25e75b4ead0c357c2322d97ed41e45
+  $fShowAABB1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+3fa40928646ec11516245b6fcddd40a1
+  $fShowAABB2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "AABB "#) -}
+1b73dae05016df36f8b68a0e6dc8d489
+  $fShowAABB3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+9d920d9efbcd2650fd57cb8e63fe3831
+  $fShowAABB_$cshow ::
+    GHC.Show.Show (f a) => Data.AABB.AABB f a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S(SS),1*U(U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   ($dShow :: GHC.Show.Show (f a))
+                   (x1 :: Data.AABB.AABB f a) ->
+                 Data.AABB.$fShowAABB_$cshowsPrec
+                   @ f
+                   @ a
+                   $dShow
+                   GHC.Show.shows22
+                   x1
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+9d920d9efbcd2650fd57cb8e63fe3831
+  $fShowAABB_$cshowList ::
+    GHC.Show.Show (f a) => [Data.AABB.AABB f a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   ($dShow :: GHC.Show.Show (f a))
+                   (eta :: [Data.AABB.AABB f a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Data.AABB.AABB f a)
+                   (Data.AABB.$fShowAABB_$cshowsPrec
+                      @ f
+                      @ a
+                      $dShow
+                      Data.AABB.$fShowAABB1)
+                   eta
+                   eta1) -}
+9d920d9efbcd2650fd57cb8e63fe3831
+  $fShowAABB_$cshowsPrec ::
+    GHC.Show.Show (f a) =>
+    GHC.Types.Int -> Data.AABB.AABB f a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),A,A)><S(S),1*U(U)><S(SS),1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   (w1 :: GHC.Show.Show (f a))
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: Data.AABB.AABB f a) ->
+                 case w2 of ww { GHC.Types.I# ww1 ->
+                 case w3 of ww2 { Data.AABB.AABB ww3 ww4 ->
+                 Data.AABB.$w$cshowsPrec @ f @ a w1 ww1 ww3 ww4 } }) -}
+34208f36492d44f36a6cbb748d2827f9
+  $tc'AABB :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4468082538221712346##
+                   9005470841811153353##
+                   Data.AABB.$trModule
+                   Data.AABB.$tc'AABB1) -}
+e634fbbf61da5dbf073a79b286a53b72
+  $tc'AABB1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'AABB"#) -}
+a82f91332184070272282339f70a8d00
+  $tcAABB :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13555466700527623722##
+                   8407823415935032602##
+                   Data.AABB.$trModule
+                   Data.AABB.$tcAABB1) -}
+c4d41faa928913544c9433acaab70de0
+  $tcAABB1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "AABB"#) -}
+a18453e71399e88b62e84d441aba9258
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.AABB.$trModule2
+                   Data.AABB.$trModule1) -}
+e3cec8a006245316522adfe8ab2824d9
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Data.AABB"#) -}
+cb51d16f8d96295a4afe02cb8e7ca2b3
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "linear-aabb-0.1.0.0-FKS3bcYwI7gItIwXlgJNo2"#) -}
+e5069281cc5507936c8eb3e65ec97a94
+  $w$cshowsPrec ::
+    GHC.Show.Show (f a) =>
+    GHC.Prim.Int# -> f a -> f a -> GHC.Show.ShowS
+  {- Arity: 4, Strictness: <L,U(C(C1(U)),A,A)><S,U><S,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ (f :: * -> *)
+                   @ a
+                   (w1 :: GHC.Show.Show (f a))
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: f a)
+                   (ww2 :: f a) ->
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ (f a) w1 Data.AABB.$fShowAABB3 ww1
+                 } in
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ (f a) w1 Data.AABB.$fShowAABB3 ww2
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False
+                   -> \ (x1 :: GHC.Base.String) ->
+                      GHC.Base.++
+                        @ GHC.Types.Char
+                        Data.AABB.$fShowAABB2
+                        (f1 (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x1)))
+                   GHC.Types.True
+                   -> \ (x1 :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows7
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Data.AABB.$fShowAABB2
+                           (f1
+                              (GHC.Types.:
+                                 @ GHC.Types.Char
+                                 GHC.Show.showSpace1
+                                 (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x1))))) }) -}
+90d1f63bac05323f8f279bf7559f470e
+  $waxes ::
+    GHC.Base.Applicative f =>
+    forall (f1 :: * -> *).
+    GHC.Base.Functor f1 =>
+    (f (a, a) -> f1 (f (a, a)))
+    -> f a -> f a -> f1 (Data.AABB.AABB f a)
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(U(U,U),A,1*C1(C1(U)),A,A)><S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ (f :: * -> *)
+                   @ a
+                   (w1 :: GHC.Base.Applicative f)
+                   @ (f1 :: * -> *)
+                   (w2 :: GHC.Base.Functor f1)
+                   (w3 :: f (a, a) -> f1 (f (a, a)))
+                   (ww :: f a)
+                   (ww1 :: f a) ->
+                 let {
+                   $dFunctor :: GHC.Base.Functor f = GHC.Base.$p1Applicative @ f w1
+                 } in
+                 GHC.Base.fmap
+                   @ f1
+                   w2
+                   @ (f (a, a))
+                   @ (Data.AABB.AABB f a)
+                   (\ (x1 :: f (a, a)) ->
+                    case GHC.Base.fmap
+                           @ f
+                           $dFunctor
+                           @ (a, a)
+                           @ a
+                           (Data.Tuple.fst @ a @ a)
+                           x1 of dt { DEFAULT ->
+                    case GHC.Base.fmap
+                           @ f
+                           $dFunctor
+                           @ (a, a)
+                           @ a
+                           (Data.Tuple.snd @ a @ a)
+                           x1 of dt1 { DEFAULT ->
+                    Data.AABB.AABB @ f @ a dt dt1 } })
+                   (w3
+                      (GHC.Base.<*>
+                         @ f
+                         w1
+                         @ a
+                         @ (a, a)
+                         (GHC.Base.fmap
+                            @ f
+                            $dFunctor
+                            @ a
+                            @ (a -> (a, a))
+                            (GHC.Tuple.(,) @ a @ a)
+                            ww)
+                         ww1))) -}
+47f4b5c73fe5e510cc4e6db5e59721a7
+  $woverlap ::
+    GHC.Classes.Ord a => a -> a -> a -> a -> GHC.Base.Maybe (a, a)
+  {- Arity: 5,
+     Strictness: <S(SC(C(S))LLLLLL),U(1*U,C(C1(U)),A,1*C1(C1(U)),A,A,A,A)><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w1 :: GHC.Classes.Ord a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a) ->
+                 let {
+                   $j :: a -> a -> GHC.Base.Maybe (a, a)
+                     {- Arity: 2, Strictness: <L,U><L,U> -}
+                   = \ (ww4 :: a)[OneShot] (ww5 :: a)[OneShot] ->
+                     let {
+                       ds :: (a, a, a)
+                       = case Data.OldList.sortBy
+                                @ a
+                                (GHC.Classes.compare @ a w1)
+                                (GHC.Types.:
+                                   @ a
+                                   ww
+                                   (GHC.Types.:
+                                      @ a
+                                      ww1
+                                      (GHC.Types.:
+                                         @ a
+                                         ww2
+                                         (GHC.Types.: @ a ww3 (GHC.Types.[] @ a))))) of wild {
+                           [] -> Data.AABB.overlap1 @ a
+                           : lo'' ds1
+                           -> case ds1 of wild1 {
+                                [] -> Data.AABB.overlap1 @ a
+                                : lo' ds2
+                                -> case ds2 of wild2 {
+                                     [] -> Data.AABB.overlap1 @ a
+                                     : hi' ds3
+                                     -> case ds3 of wild3 {
+                                          [] -> Data.AABB.overlap1 @ a
+                                          : ds4 ds5
+                                          -> case ds5 of wild4 {
+                                               [] -> (lo'', lo', hi')
+                                               : ipv ipv1 -> Data.AABB.overlap1 @ a } } } } }
+                     } in
+                     let {
+                       $dEq :: GHC.Classes.Eq a = GHC.Classes.$p1Ord @ a w1
+                     } in
+                     let {
+                       lo' :: a = case ds of ds1 { (,,) lo'' lo'1 hi' -> lo'1 }
+                     } in
+                     case GHC.Classes.==
+                            @ a
+                            $dEq
+                            ww4
+                            (case ds of ds1 { (,,) lo'' lo'1 hi' -> lo'' }) of wild {
+                       GHC.Types.False
+                       -> GHC.Base.Just
+                            @ (a, a)
+                            (lo', case ds of ds1 { (,,) lo'' lo'1 hi' -> hi' })
+                       GHC.Types.True
+                       -> case GHC.Classes.== @ a $dEq ww5 lo' of wild1 {
+                            GHC.Types.False
+                            -> GHC.Base.Just
+                                 @ (a, a)
+                                 (lo', case ds of ds1 { (,,) lo'' lo'1 hi' -> hi' })
+                            GHC.Types.True -> GHC.Base.Nothing @ (a, a) } }
+                 } in
+                 case GHC.Classes.compare @ a w1 ww ww2 of wild {
+                   GHC.Types.LT -> $j ww ww1
+                   GHC.Types.EQ
+                   -> case GHC.Classes.<= @ a w1 ww1 ww3 of wild1 {
+                        GHC.Types.False -> $j ww2 ww3 GHC.Types.True -> $j ww ww1 }
+                   GHC.Types.GT -> $j ww2 ww3 }) -}
+68e534c902a081326cc33b09c44b8ec9
+  $wsize ::
+    (GHC.Base.Applicative f, GHC.Num.Num a) =>
+    forall (f1 :: * -> *).
+    GHC.Base.Functor f1 =>
+    (f a -> f1 (f a)) -> f a -> f a -> f1 (Data.AABB.AABB f a)
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A)><L,U(1*U,1*U,A,A,A,A,A)><S(C(C(S))L),U(C(C1(U)),A)><L,1*C1(U)><S,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ (f :: * -> *)
+                   @ a
+                   (w1 :: GHC.Base.Applicative f)
+                   (w2 :: GHC.Num.Num a)
+                   @ (f1 :: * -> *)
+                   (w3 :: GHC.Base.Functor f1)
+                   (w4 :: f a -> f1 (f a))
+                   (ww :: f a)
+                   (ww1 :: f a) ->
+                 GHC.Base.fmap
+                   @ f1
+                   w3
+                   @ (f a)
+                   @ (Data.AABB.AABB f a)
+                   (Data.AABB.$WAABB @ f @ a ww)
+                   (GHC.Base.fmap
+                      @ f1
+                      w3
+                      @ (f a)
+                      @ (f a)
+                      (let {
+                         lvl :: f (a -> a)
+                         = GHC.Base.fmap
+                             @ f
+                             (GHC.Base.$p1Applicative @ f w1)
+                             @ a
+                             @ (a -> a)
+                             (GHC.Num.+ @ a w2)
+                             ww
+                       } in
+                       \ (eta2 :: f a) -> GHC.Base.<*> @ f w1 @ a @ a lvl eta2)
+                      (w4
+                         (GHC.Base.<*>
+                            @ f
+                            w1
+                            @ a
+                            @ a
+                            (GHC.Base.fmap
+                               @ f
+                               (GHC.Base.$p1Applicative @ f w1)
+                               @ a
+                               @ (a -> a)
+                               (GHC.Num.- @ a w2)
+                               ww1)
+                            ww)))) -}
+9d920d9efbcd2650fd57cb8e63fe3831
+  type role AABB representational nominal
+  data AABB (f :: * -> *) a = AABB !(f a) !(f a)
+b80693c3b3c836ab50fbafb8960d0dc2
+  axes ::
+    GHC.Base.Applicative f =>
+    Lens.Micro.Type.Lens' (Data.AABB.AABB f a) (f (a, a))
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(U(U,U),A,1*C1(C1(U)),A,A)><S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S(SS),1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   (w1 :: GHC.Base.Applicative f)
+                   @ (f1 :: * -> *)
+                   (w2 :: GHC.Base.Functor f1)
+                   (w3 :: f (a, a) -> f1 (f (a, a)))
+                   (w4 :: Data.AABB.AABB f a) ->
+                 case w4 of ww { Data.AABB.AABB ww1 ww2 ->
+                 Data.AABB.$waxes @ f @ a w1 @ f1 w2 w3 ww1 ww2 }) -}
+f9c6d33757c863e685badc07e987f832
+  axis ::
+    GHC.Base.Applicative f =>
+    Lens.Micro.Type.Lens' (f (a, a)) (a, a)
+    -> Lens.Micro.Type.Lens' (Data.AABB.AABB f a) (a, a)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(U(U,U),A,C(C1(U)),A,A)><L,1*C1(U)><L,U(U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   (dk :: Lens.Micro.Type.Lens' (f (a, a)) (a, a))
+                   @ (f1 :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f1) ->
+                 let {
+                   g :: ((a, a) -> f1 (a, a)) -> f (a, a) -> f1 (f (a, a))
+                   = dk @ f1 $dFunctor
+                 } in
+                 \ (x1 :: (a, a) -> f1 (a, a)) ->
+                 Data.AABB.axes @ f @ a $dApplicative @ f1 $dFunctor (g x1)) -}
+ad1c0d47c5a5d02477f9b5497f560460
+  depth ::
+    (GHC.Base.Applicative f, Linear.V3.R3 f, GHC.Num.Num a) =>
+    Lens.Micro.Type.Lens' (Data.AABB.AABB f a) a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A)><L,1*U(A,1*C1(U),A)><L,U(U,U,A,A,A,A,A)><L,U(U,U)>,
+     Unfolding: (\ @ (f :: * -> *)
+                   @ a
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   ($dR3 :: Linear.V3.R3 f)
+                   ($dNum :: GHC.Num.Num a)
+                   @ (f1 :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f1) ->
+                 let {
+                   g :: (a -> f1 a) -> f a -> f1 (f a)
+                   = Linear.V3._z @ f $dR3 @ a @ f1 $dFunctor
+                 } in
+                 \ (x1 :: a -> f1 a) ->
+                 let {
+                   w1 :: f a -> f1 (f a) = g x1
+                 } in
+                 \ (w2 :: Data.AABB.AABB f a) ->
+                 case w2 of ww { Data.AABB.AABB ww1 ww2 ->
+                 Data.AABB.$wsize
+                   @ f
+                   @ a
+                   $dApplicative
+                   $dNum
+                   @ f1
+                   $dFunctor
+                   w1
+                   ww1
+                   ww2 }) -}
+6b5d5249a8b469cbce0f6a5ea4a1eff5
+  height ::
+    (GHC.Base.Applicative f, Linear.V2.R2 f, GHC.Num.Num a) =>
+    Lens.Micro.Type.Lens' (Data.AABB.AABB f a) a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A)><L,1*U(A,1*C1(U),A)><L,U(U,U,A,A,A,A,A)><L,U(U,U)>,
+     Unfolding: (\ @ (f :: * -> *)
+                   @ a
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   ($dR2 :: Linear.V2.R2 f)
+                   ($dNum :: GHC.Num.Num a)
+                   @ (f1 :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f1) ->
+                 let {
+                   g :: (a -> f1 a) -> f a -> f1 (f a)
+                   = Linear.V2._y @ f $dR2 @ a @ f1 $dFunctor
+                 } in
+                 \ (x1 :: a -> f1 a) ->
+                 let {
+                   w1 :: f a -> f1 (f a) = g x1
+                 } in
+                 \ (w2 :: Data.AABB.AABB f a) ->
+                 case w2 of ww { Data.AABB.AABB ww1 ww2 ->
+                 Data.AABB.$wsize
+                   @ f
+                   @ a
+                   $dApplicative
+                   $dNum
+                   @ f1
+                   $dFunctor
+                   w1
+                   ww1
+                   ww2 }) -}
+db454b6de39b063f6de35d15ce0e6f71
+  hi :: Lens.Micro.Type.Lens' (Data.AABB.AABB f a) (f a)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S(SS),1*U(U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   @ (f1 :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f1)
+                   (f2 :: f a -> f1 (f a))
+                   (ds :: Data.AABB.AABB f a) ->
+                 case ds of wild { Data.AABB.AABB a1 b ->
+                 GHC.Base.fmap
+                   @ f1
+                   $dFunctor
+                   @ (f a)
+                   @ (Data.AABB.AABB f a)
+                   (Data.AABB.$WAABB @ f @ a a1)
+                   (f2 b) }) -}
+b47b197f9d91ae3f424fd3711ff82636
+  intersect ::
+    (GHC.Base.Applicative f, Data.Traversable.Traversable f,
+     GHC.Classes.Ord a) =>
+    Data.AABB.AABB f a
+    -> Data.AABB.AABB f a -> GHC.Base.Maybe (Data.AABB.AABB f a)
+  {- Arity: 5,
+     Strictness: <L,U(U(U,U),A,C(C1(U)),A,A)><S(LLLC(C(S))LL),1*U(A,A,A,1*C1(C1(U)),A,A)><L,U(U,C(C1(U)),A,C(C1(U)),A,A,A,A)><L,1*U(U,U)><L,1*U(U,U)>,
+     Unfolding: (\ @ (f :: * -> *)
+                   @ a
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   ($dTraversable :: Data.Traversable.Traversable f)
+                   ($dOrd :: GHC.Classes.Ord a)
+                   (a1 :: Data.AABB.AABB f a)
+                   (b :: Data.AABB.AABB f a) ->
+                 case Data.Traversable.sequenceA
+                        @ f
+                        $dTraversable
+                        @ GHC.Base.Maybe
+                        @ (a, a)
+                        GHC.Base.$fApplicativeMaybe
+                        (GHC.Base.<*>
+                           @ f
+                           $dApplicative
+                           @ (a, a)
+                           @ (GHC.Base.Maybe (a, a))
+                           (GHC.Base.fmap
+                              @ f
+                              (GHC.Base.$p1Applicative @ f $dApplicative)
+                              @ (a, a)
+                              @ ((a, a) -> GHC.Base.Maybe (a, a))
+                              (Data.AABB.overlap @ a $dOrd)
+                              (case a1 of ww { Data.AABB.AABB ww1 ww2 ->
+                               (Data.AABB.$waxes
+                                  @ f
+                                  @ a
+                                  $dApplicative
+                                  @ (Data.Functor.Const.Const (f (a, a)))
+                                  (Data.Functor.Const.$fFunctorConst @ (f (a, a)))
+                                  (Data.AABB.intersect1 @ f @ a)
+                                    `cast`
+                                  (<f (a, a)>_R
+                                   ->_R Sym (Data.Functor.Const.N:Const[0]
+                                                 <*>_N <f (a, a)>_R <f (a, a)>_P))
+                                  ww1
+                                  ww2)
+                                 `cast`
+                               (Data.Functor.Const.N:Const[0]
+                                    <*>_N <f (a, a)>_R <Data.AABB.AABB f a>_P) }))
+                           (case b of ww { Data.AABB.AABB ww1 ww2 ->
+                            (Data.AABB.$waxes
+                               @ f
+                               @ a
+                               $dApplicative
+                               @ (Data.Functor.Const.Const (f (a, a)))
+                               (Data.Functor.Const.$fFunctorConst @ (f (a, a)))
+                               (Data.AABB.intersect1 @ f @ a)
+                                 `cast`
+                               (<f (a, a)>_R
+                                ->_R Sym (Data.Functor.Const.N:Const[0]
+                                              <*>_N <f (a, a)>_R <f (a, a)>_P))
+                               ww1
+                               ww2)
+                              `cast`
+                            (Data.Functor.Const.N:Const[0]
+                                 <*>_N <f (a, a)>_R <Data.AABB.AABB f a>_P) })) of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ (Data.AABB.AABB f a)
+                   GHC.Base.Just x1
+                   -> GHC.Base.Just
+                        @ (Data.AABB.AABB f a)
+                        (let {
+                           $dFunctor :: GHC.Base.Functor f
+                           = GHC.Base.$p1Applicative @ f $dApplicative
+                         } in
+                         case GHC.Base.fmap
+                                @ f
+                                $dFunctor
+                                @ (a, a)
+                                @ a
+                                (Data.Tuple.fst @ a @ a)
+                                x1 of dt { DEFAULT ->
+                         case GHC.Base.fmap
+                                @ f
+                                $dFunctor
+                                @ (a, a)
+                                @ a
+                                (Data.Tuple.snd @ a @ a)
+                                x1 of dt1 { DEFAULT ->
+                         Data.AABB.AABB @ f @ a dt dt1 } }) }) -}
+cdfb4266d7d5f81c264bbe11cab3c9e8
+  intersect1 :: f (a, a) -> f (a, a)
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ @ (f :: * -> *) @ a (tpl :: f (a, a))[OneShot] ->
+                 tpl) -}
+7a23f3c5161463ef8ea6354f2c4d783b
+  lo :: Lens.Micro.Type.Lens' (Data.AABB.AABB f a) (f a)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S(SS),1*U(U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   @ (f1 :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f1)
+                   (f2 :: f a -> f1 (f a))
+                   (ds :: Data.AABB.AABB f a) ->
+                 case ds of wild { Data.AABB.AABB a1 b ->
+                 GHC.Base.fmap
+                   @ f1
+                   $dFunctor
+                   @ (f a)
+                   @ (Data.AABB.AABB f a)
+                   (\ (y1 :: f a) ->
+                    case y1 of dt { DEFAULT -> Data.AABB.AABB @ f @ a dt b })
+                   (f2 a1) }) -}
+086006eafb939aa75da66c92a6b26fa2
+  overlap ::
+    GHC.Classes.Ord a => (a, a) -> (a, a) -> GHC.Base.Maybe (a, a)
+  {- Arity: 3,
+     Strictness: <S(SC(C(S))LLLLLL),U(1*U,C(C1(U)),A,1*C1(C1(U)),A,A,A,A)><S,1*U(U,U)><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a (w1 :: GHC.Classes.Ord a) (w2 :: (a, a)) (w3 :: (a, a)) ->
+                 case w2 of ww { (,) ww1 ww2 ->
+                 case w3 of ww3 { (,) ww4 ww5 ->
+                 Data.AABB.$woverlap @ a w1 ww1 ww2 ww4 ww5 } }) -}
+3ba6678c8d8de801b0c826ebfa2306f5
+  overlap1 :: (a, a, a)
+  {- Strictness: x -}
+bfa3d178b04b5ab6c2bb5fa6735c30c3
+  size ::
+    (GHC.Base.Applicative f, GHC.Num.Num a) =>
+    Lens.Micro.Type.Lens' (Data.AABB.AABB f a) (f a)
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A)><L,U(1*U,1*U,A,A,A,A,A)><S(C(C(S))L),U(C(C1(U)),A)><L,1*C1(U)><S(SS),1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   (w1 :: GHC.Base.Applicative f)
+                   (w2 :: GHC.Num.Num a)
+                   @ (f1 :: * -> *)
+                   (w3 :: GHC.Base.Functor f1)
+                   (w4 :: f a -> f1 (f a))
+                   (w5 :: Data.AABB.AABB f a) ->
+                 case w5 of ww { Data.AABB.AABB ww1 ww2 ->
+                 Data.AABB.$wsize @ f @ a w1 w2 @ f1 w3 w4 ww1 ww2 }) -}
+6effd5bbb7b14653489f611c5130adc0
+  unzipA :: GHC.Base.Applicative f => f (a, a) -> (f a, f a)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(1*U,A,A,A,A)><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   (w1 :: GHC.Base.Applicative f)
+                   (w2 :: f (a, a)) ->
+                 let {
+                   $dFunctor :: GHC.Base.Functor f = GHC.Base.$p1Applicative @ f w1
+                 } in
+                 (GHC.Base.fmap
+                    @ f
+                    $dFunctor
+                    @ (a, a)
+                    @ a
+                    (Data.Tuple.fst @ a @ a)
+                    w2,
+                  GHC.Base.fmap
+                    @ f
+                    $dFunctor
+                    @ (a, a)
+                    @ a
+                    (Data.Tuple.snd @ a @ a)
+                    w2)) -}
+4a46ed29efa4a45ebef7069c60818de6
+  w :: Linear.V4.R4 f => Lens.Micro.Type.Lens' (f a) a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LC(S)L),1*U(A,1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ (f :: * -> *)
+                   @ a
+                   ($dR4 :: Linear.V4.R4 f)
+                   @ (f1 :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f1) ->
+                 Linear.V4._w @ f $dR4 @ a @ f1 $dFunctor) -}
+7fa3e10f5de88a970b220411604d54f9
+  width ::
+    (GHC.Base.Applicative f, Linear.V1.R1 f, GHC.Num.Num a) =>
+    Lens.Micro.Type.Lens' (Data.AABB.AABB f a) a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A)><L,1*C1(U)><L,U(U,U,A,A,A,A,A)><L,U(U,U)>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   ($dR1 :: Linear.V1.R1 f)
+                   ($dNum :: GHC.Num.Num a)
+                   @ (f1 :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f1) ->
+                 let {
+                   g :: (a -> f1 a) -> f a -> f1 (f a)
+                   = $dR1 `cast` (Linear.V1.N:R1[0] <f>_N) @ a @ f1 $dFunctor
+                 } in
+                 \ (x1 :: a -> f1 a) ->
+                 Data.AABB.size
+                   @ f
+                   @ a
+                   $dApplicative
+                   $dNum
+                   @ f1
+                   $dFunctor
+                   (g x1)) -}
+d7c216e9006f3bfa2b0fe1dd22fce78d
+  x :: Linear.V1.R1 f => Lens.Micro.Type.Lens' (f a) a
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ (f :: * -> *)
+                   @ a
+                   ($dR1 :: Linear.V1.R1 f)
+                   @ (f1 :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f1) ->
+                 $dR1 `cast` (Linear.V1.N:R1[0] <f>_N) @ a @ f1 $dFunctor) -}
+7f5cc6686a99839b818e696fb1e1b0d2
+  y :: Linear.V2.R2 f => Lens.Micro.Type.Lens' (f a) a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LC(S)L),1*U(A,1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ (f :: * -> *)
+                   @ a
+                   ($dR2 :: Linear.V2.R2 f)
+                   @ (f1 :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f1) ->
+                 Linear.V2._y @ f $dR2 @ a @ f1 $dFunctor) -}
+2bc76d53c74542d9c876240a71b373c6
+  z :: Linear.V3.R3 f => Lens.Micro.Type.Lens' (f a) a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LC(S)L),1*U(A,1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ (f :: * -> *)
+                   @ a
+                   ($dR3 :: Linear.V3.R3 f)
+                   @ (f1 :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f1) ->
+                 Linear.V3._z @ f $dR3 @ a @ f1 $dFunctor) -}
+b2099981322a74f5fe5d510f63c23d33
+  zipA :: GHC.Base.Applicative f => f a -> f a -> f (a, a)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLC(C(S))LL),U(1*U(1*C1(C1(U)),A),A,1*C1(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   (eta1 :: f a)
+                   (eta2 :: f a) ->
+                 GHC.Base.<*>
+                   @ f
+                   $dApplicative
+                   @ a
+                   @ (a, a)
+                   (GHC.Base.fmap
+                      @ f
+                      (GHC.Base.$p1Applicative @ f $dApplicative)
+                      @ a
+                      @ (a -> (a, a))
+                      (GHC.Tuple.(,) @ a @ a)
+                      eta1)
+                   eta2) -}
+instance [safe] GHC.Classes.Eq [Data.AABB.AABB]
+  = Data.AABB.$fEqAABB
+instance [safe] GHC.Show.Show [Data.AABB.AABB]
+  = Data.AABB.$fShowAABB
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
