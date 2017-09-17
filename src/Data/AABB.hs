@@ -13,6 +13,8 @@
 --        - Be a responsible citizen and use magical typeclasses, once they come out
 --        - Cardinal direction lenses (?)
 --        - Simplify signatures where possible
+--        - Deal with corner-cases
+--        - Loosen constraints where possible (eg. width, although it'd require a slightly less elegant impl.)
 
 -- GHC Pragrams ----------------------------------------------------------------
 
@@ -56,7 +58,7 @@ axes :: Applicative f => Lens' (AABB f a) (f (a, a))
 axes f (AABB a b) = uncurry AABB . unzipA <$> f (zipA a b)
 
 
--- | Creates a lens that focuses on a single axis, given another 'Lens' (presumably, 'x', 'y' or 'z')
+-- | Creates a 'Lens' that focuses on a single axis, given another 'Lens' (presumably, 'x', 'y' or 'z')
 axis :: Applicative f => Lens' (f (a, a)) (a, a) -> Lens' (AABB f a) (a, a)
 axis = (axes .)
 
@@ -100,7 +102,7 @@ depth = size.z
 -- |
 -- TODO | - Refactor (cf. traverse)
 intersect :: (Applicative f, Traversable f, Ord a) => AABB f a -> AABB f a -> Maybe (AABB f a)
-intersect a b = fmap (uncurry AABB . unzipA) . sequenceA $ uncurry overlap <$> zipA (a^.axes) (b^.axes)
+intersect a b = fmap (uncurry AABB . unzipA) . sequenceA $ liftA2 overlap (a^.axes) (b^.axes)
 
 
 -- | Finds the overlap between two inclusive ranges
