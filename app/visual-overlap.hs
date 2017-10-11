@@ -11,6 +11,10 @@
 -- TODO | -
 --        -
 
+-- GHC Pragmas -----------------------------------------------------------------
+
+{-# LANGUAGE LambdaCase #-}
+
 -- API -------------------------------------------------------------------------
 
 module Main where
@@ -18,18 +22,22 @@ module Main where
 -- We'll need these ------------------------------------------------------------
 
 -- *
+import qualified Data.Text as Text
+import qualified Data.Text.Encoding as Text
+
 --import           Graphics.DrawingCombinators  as Draw
 import           Control.Applicative
-import           Control.Concurrent.STM.TChan
+import           Control.Concurrent.STM
 import           Control.Exception.Safe
-import           Control.Monad.IO.Class       (MonadIO)
-import           Control.Monad.Loops
-import           Control.Monad.Trans.Class    (lift)
+import           Control.Monad.IO.Class        (MonadIO)
+import           Control.Monad.Trans.Class     (MonadTrans (lift))
 import           Control.Monad.Trans.Either
-import           Data.Strict.Set              as Set
+import           Data.Set                      as Set
 import           Graphics.Rasterific
-import           Graphics.Rendering.OpenGL    as GL
-import           Graphics.UI.GLFW             as GLFW
+import           Graphics.Rendering.OpenGL     (($=))
+import           Graphics.Rendering.OpenGL     as GL
+-- import qualified Graphics.Rendering.OpenGL.Raw as GL
+import           Graphics.UI.GLFW              as GLFW
 import           Lens.Micro
 import           Linear
 
@@ -39,80 +47,85 @@ import           Data.AABB
 -- Definitions -----------------------------------------------------------------
 
 data App = App {
-  fInput  :: Input,
-  fWindow :: GLFW.Window
-}
-
-data Input = Input {
-  fMessages   :: TChan Message,
-  fTime       :: Double,
-  fWindowRect :: AABB V2 Int,
-  fCursor     :: V2 Double,
-  fKeyboard   :: Keyboard
-}
-
-type Keyboard = Set GLFW.Key
+  fInput :: Input App
+} deriving (Show)
 
 (~>) = (^.)
 
-input :: SimpleGetter App ()
-input = to fInput
-
 window :: SimpleGetter App GLFW.Window
-window = to fWindow
+window = to (fWindow . fInput)
 
---------------------------------------------------------------------------------
-
--- | Promote a 'Bool' to an 'EitherT'
-insist :: Monad m => Bool -> e -> EitherT e m ()
-insist False e = left e
-insist True  _ = right ()
-
-
--- | Promote a 'Maybe' to an 'EitherT'
--- TODO | - Factor out
-explain :: Monad m => e -> Maybe a -> EitherT e m a
-explain e = maybe (left e) right
-
-
--- | Do nothing whatsoever
-pass :: Applicative f => f ()
-pass = pure ()
+--window :: SimpleGetter App GLFW.Window
+--window = to fWindow
 
 --------------------------------------------------------------------------------
 
 -- |
-setup :: EitherT String IO App
-setup = do
-  b <- lift GLFW.init
-  insist b "Failed to initialise GLFW"
-  win <- explain "Failed to create window" =<< lift (GLFW.createWindow dx dy "Visual Overlap" Nothing Nothing)
-  lift . GLFW.makeContextCurrent $ Just win
-  return $ App { fInput = (), fWindow = win }
-  where
-    (V2 dx dy) = V2 720 480
+setupGraphics :: App -> IO ()
+setupGraphics app = do
+  -- Shaders
+  vs <- GL.createShader GL.VertexShader
+  fs <- GL.createShader GL.FragmentShader
+
+  GL.shaderSourceBS vs $= Text.encodeUtf8
+    (Text.pack $ unlines
+      [ "#version 130"
+      , ""
+      ])
+
+  GL.shaderSourceBS fs $= Text.encodeUtf8
+      (Text.pack $ unlines
+        [ "#version 130"
+        , ""
+        ])
+
+  GL.compileShader vs
+  GL.compileShader fs
+
+  pr <- GL.createProgram
+  GL.attachShader pr vs
+  GL.attachShader pr fs
+
+  -- _ <- GL.uniformLocation ____
+
+  -- GL.attribLocation "___" $= ___
+
+  GL.linkProgram pr
+  GL.currentProgram $= Just pr
+
+  -- Vertices
 
 
 -- |
-run :: EitherT String IO ()
-run = do
-  app <- setup
-  iterateUntilM (\_ -> lift . GLFW.windowShouldClose $ app~>window) $ \app -> do
-    --render app
-    lift . GLFW.swapBuffers $ app~>window
-    lift $ render
-    lift $ GLFW.pollEvents
-    advance app
-  pass
+run :: EitherT String IO App
+run = setup >>= loop
 
 
 -- |
-advance :: EitherT String IO App
-advance old = _
+loop :: App -> EitherT String IO App
+loop = iterateWhileM (\app -> not <$> shouldClose (app~>window)) $ \app -> do
+  lift . GLFW.swapBuffers $ app~>window
+  lift $ render app
+  lift $ GLFW.pollEvents
+  advance app
 
 
 -- |
---render :: _
+advance :: App -> EitherT String IO App
+advance old = return old
+
+
+-- |
+render :: App -> IO ()
+render app = do
+  GL.viewport $= (Position 0 0, Size 100 100) -- TODO: Size
+  GL.clear [GL.ColorBuffer]
+
+
+-- |
+shouldClose :: MonadTrans t => GLFW.Window -> t IO Bool
+shouldClose = lift . GLFW.windowShouldClose
+
 
 -- |
 main :: IO ()
