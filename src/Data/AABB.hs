@@ -127,11 +127,15 @@ overlap a b
 
 
 -- |
--- TODO | - Reuse pre-existing version of 'between' (maybe intervals has one?)
 inside :: (Applicative f, Foldable f, Ord a) => f a -> AABB f a -> Bool
 inside p (AABB lo' hi') = and $ between <$> p <*> lo' <*> hi'
-  where
-    between n a b = (a <= n) && (n <= b)
+
+
+-- |
+-- TODO | - Reuse pre-existing version of 'between' (maybe intervals has one?)
+--        - Rearrange parameters (?)
+between :: Ord a => a -> a -> a -> Bool
+between n a b = (a <= n) && (n <= b)
 
 
 -- |
