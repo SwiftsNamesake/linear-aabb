@@ -11,9 +11,10 @@
 -- TODO | - Encode handedness of coordinate system using types (eg. a type parameter) (?)
 --        - Enforce lo < hi
 --        - Testing (QuickCheck)
+--        - Proper documentation, examples
 --        - Be a responsible citizen and use magical typeclasses, once they come out
 --        - Cardinal direction lenses (?)
---        - Simplify signatures where possible (ConstraintKinds?)
+--        - Simplify signatures where possible, could we define a Vector class as a set of other constraints (ConstraintKinds?)
 --        - Deal with corner-cases
 --        - Loosen constraints where possible (eg. width, although it'd require a slightly less elegant impl.)
 --        - Reconsider the Applicative constraint (see linear, should we use Additive instead)
@@ -62,6 +63,12 @@ hi :: Lens' (AABB f a) (f a)
 hi f (AABB a b) = (\new -> AABB a new) <$> f b
 
 
+-- | Focus on the position (lo), without ever changing the size (hi-lo).
+-- TODO | - Rename (?)
+position :: (Applicative f, Num a) => Lens' (AABB f a) (f a)
+position f (AABB a b) = (\new -> AABB new (liftA2 (+) new $ liftA2 (-) b a)) <$> f a
+
+
 -- |
 axes :: Applicative f => Lens' (AABB f a) (f (a, a))
 axes f (AABB a b) = uncurry AABB . unzipA <$> f (zipA a b)
@@ -97,9 +104,14 @@ depth = size.z
 
 
 -- |
---pinned :: _
---centre ::
---centre = pinned $ pure _
+pinned :: (Applicative f, Num a) => f a -> Lens' (AABB f a) (f a)
+pinned pin f s = let off = liftA2 (*) (s^.size) pin in (\new -> s & position .~ liftA2 (-) new off) <$> f (liftA2 (+) (s^.lo) off)
+
+
+-- |
+-- TODO | - Decide on numeric constraint (rational class?)
+centre :: (Applicative f, Fractional a) => Lens' (AABB f a) (f a)
+centre = pinned (pure 0.5)
 
 --------------------------------------------------------------------------------
 
