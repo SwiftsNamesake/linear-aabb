@@ -132,8 +132,8 @@ intersect a b = fmap (uncurry AABB . unzipA) . sequenceA $ liftA2 overlap (a^.ax
 --        - Simplify, refactor
 overlap :: Ord a => (a, a) -> (a, a) -> Maybe (a, a)
 overlap a b
-  | min a b /= (lo'', lo')  = Just (lo', hi')
-  | otherwise               = Nothing
+  | min a b /= (lo'', lo') = Just (lo', hi')
+  | otherwise              = Nothing
   where
     [lo'', lo', hi', _] = sort [fst a, snd a, fst b, snd b]
 
